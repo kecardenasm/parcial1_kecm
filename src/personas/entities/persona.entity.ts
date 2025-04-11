@@ -11,11 +11,11 @@ export class Persona {
     @Column('varchar', { length: 50 })
     nombres: string;
 
-    @Column('varchar', { length: 50 })
-    PrimerApellido: string;
+    @Column('varchar', { length: 50, name: 'primer_apellido' })
+    primerApellido: string;
 
-    @Column('varchar', { length: 50 })
-    SegundoApellido: string;
+    @Column('varchar', { length: 50, name: 'segundo_apellido' })
+    segundoApellido: string;
 
     @Column('date', { name: 'fecha_nacimiento'})
     fechaNacimiento: Date;

@@ -18,13 +18,13 @@ export class CreatePersonaDto {
     @IsNotEmpty({ message: 'El campo Primer Apellido es obligatorio' })
     @IsString({ message: 'El campo Primer Apellido debe ser una cadena de texto' })
     @MaxLength(50, { message: 'El campo Primer Apellido no puede tener más de 50 caracteres' })
-    readonly PrimerApellido: string;
+    readonly primerApellido: string;
 
     @ApiProperty()
     @IsNotEmpty({ message: 'El campo Segundo Apellido es obligatorio' })
     @IsString({ message: 'El campo Segundo Apellido debe ser una cadena de texto' })
     @MaxLength(50, { message: 'El campo Segundo Apellido no puede tener más de 50 caracteres' })
-    readonly SegundoApellido: string;
+    readonly segundoApellido: string;
 
     @ApiProperty()
     @IsNotEmpty({ message: 'El campo Fecha de Nacimiento es obligatorio' })

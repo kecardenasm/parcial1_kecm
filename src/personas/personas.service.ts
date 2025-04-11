@@ -16,8 +16,8 @@ export class PersonasService {
     const existe = await this.personasRepository.findOneBy({
       ci: createPersonaDto.ci.trim(),
 
-      PrimerApellido: createPersonaDto.PrimerApellido.trim(),
-      SegundoApellido: createPersonaDto.SegundoApellido.trim(),
+      primerApellido: createPersonaDto.primerApellido.trim(),
+      segundoApellido: createPersonaDto.segundoApellido.trim(),
       fechaNacimiento: createPersonaDto.fechaNacimiento,
     })
 
@@ -26,8 +26,8 @@ export class PersonasService {
       const persona = new Persona();
       persona.ci = createPersonaDto.ci.trim();
       persona.nombres = createPersonaDto.nombres.trim();
-      persona.PrimerApellido = createPersonaDto.PrimerApellido.trim();
-      persona.SegundoApellido = createPersonaDto.SegundoApellido.trim();
+      persona.primerApellido = createPersonaDto.primerApellido.trim();
+      persona.segundoApellido = createPersonaDto.segundoApellido.trim();
       persona.fechaNacimiento = createPersonaDto.fechaNacimiento;
     
     return this.personasRepository.save(persona);
